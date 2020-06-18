@@ -223,16 +223,16 @@ def create_app(test_config=None):
         
      
         
-        f={
+        quiz={
         'id': questions.id,
         'question': questions.question,
         'answer': questions.answer,
         'category': questions.category,
         'difficulty': questions.difficulty}
-        print(f)
+        print(quiz)
        
         return jsonify({
-         "question":f,
+         "question":quiz,
          "previousQuestions":[]
          
 
