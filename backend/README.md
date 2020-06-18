@@ -72,9 +72,9 @@ This README is missing documentation of your endpoints. Below is an example for 
 
 Endpoints
 GET '/categories'
-GET ...
-POST ...
-DELETE ...
+GET ...'/categories/<int:category_id>/questions''
+POST ...'/questions'
+DELETE ...'/questions/<int:questions_id>'
 
 GET '/categories'
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
@@ -88,7 +88,48 @@ GET '/categories'
 '6' : "Sports"}
 
 ```
+GET '/categories/<int:category_id>/questions'
+- Fetches a dictionary of questions
+- Request Argument: category id 
+- Return list of questions filter by category ID
+key: value pairs.
+{
+     "questions": [
+    {
+      "answer": "Escher",
+      "category": 2,
+      "difficulty": ,
+      "id":,
+      "question": "
+    }]
+}
+```
+POST '/questions'
 
+- Create a new question in body including new (question,answer,category,difficulty).
+- Return a list of question the new question, success ,total_questions
+{
+    "add_question": [
+    {
+      "answer": "",
+      "category": ,
+      "difficulty": ,
+      "id":,
+      "question": ""
+    },]
+    "success": ,
+  "total_questions": 
+}
+```
+DELETE '/questions/<int:questions_id>'
+- Delete the question by id
+- Return the remaining of questions.
+{
+  "deleted": 56,
+  "name": "jj",
+  "success": true,
+  "total_questions": 20
+}
 
 ## Testing
 To run the tests, run
