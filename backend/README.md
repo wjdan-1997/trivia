@@ -130,6 +130,24 @@ DELETE '/questions/<int:questions_id>'
   "success": true,
   "total_questions": 20
 }
+```
+-POST
+
+
+```
+POST '/quizzes'
+- Fetches the question  ,,including previous_question (id) ,quiz_category(type,id)
+- Return the random.(questions)
+
+{
+      "answer": "George Washington Carver",
+      "category": 4,
+      "difficulty": 2,
+      "id": 12,
+      "question": "Who invented Peanut Butter?"
+    }
+
+
 
 ## Testing
 To run the tests, run
